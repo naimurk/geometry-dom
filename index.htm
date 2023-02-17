@@ -33,9 +33,9 @@
                   <h2 id="triangle" class="font-semibold text-2xl text-center">Triangle</h2>
                    <p>Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> b <i class="fa-solid fa-xmark"></i> h</p>
                    <div class="flex py-5">
-                    <input id="triangle-field-b" type="text" placeholder="Type here" class="input input-bordered w-1/2 max-w-xs" />
+                    <input id="triangle-field-b" type="text" placeholder="b" class="input input-bordered w-1/2 max-w-xs" />
                     <p class="px-2 pt-2">cm</p>
-                    <input id="triangle-field-h" type="text" placeholder="Type here" class="input input-bordered w-1/2 max-w-xs" />
+                    <input id="triangle-field-h" type="text" placeholder="h" class="input input-bordered w-1/2 max-w-xs" />
                     
                    </div>
                   <div class="card-actions justify-end">
@@ -43,35 +43,37 @@
                   </div>
                 </div>
               </div>
+              <!-- rectangle card 2 -->
             <div class="card w-full bg-base-100 shadow-xl text-center py-12 my-5 border">
                 <figure><img src="./img/rectangle.png" alt="Shoes" /></figure>
                 <div class="card-body">
-                  <h2 class="font-semibold text-2xl text-center">Rectangle</h2>
-                   <p>Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> b <i class="fa-solid fa-xmark"></i> h</p>
+                  <h2 id="rectangle" class="font-semibold text-2xl text-center">Rectangle</h2>
+                   <p>Area (A) =  w <i class="fa-solid fa-xmark"></i> l</p>
                    <div class="flex py-5">
-                    <input type="text" placeholder="Type here" class="input input-bordered w-1/2 max-w-xs" />
+                    <input type="text" placeholder="Type here" id="rectangle-field-w" class="input input-bordered w-1/2 max-w-xs" />
                     <p class="px-2 pt-2">cm</p>
-                    <input type="text" placeholder="Type here" class="input input-bordered w-1/2 max-w-xs" />
+                    <input type="text" placeholder="Type here" id="rectangle-field-l"  class="input input-bordered w-1/2 max-w-xs" />
                     
                    </div>
                   <div class="card-actions justify-end">
-                    <button class="btn btn-wide mx-auto bg-sky-500">Calculate</button>
+                    <button id="rectangle-btn" class="btn btn-wide mx-auto bg-sky-500">Calculate</button>
                   </div>
                 </div>
               </div>
+              <!-- parallelogram card 3 -->
             <div class="card w-full bg-base-100 shadow-xl text-center py-12 my-5 border">
                 <figure><img src="./img/parallelogram.png" alt="Shoes" /></figure>
                 <div class="card-body">
-                  <h2 class="font-semibold text-2xl text-center">Parallelogram</h2>
-                   <p>Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> b <i class="fa-solid fa-xmark"></i> h</p>
+                  <h2 id="parallelogram" class="font-semibold text-2xl text-center">Parallelogram</h2>
+                   <p>Area (A) = b <i class="fa-solid fa-xmark"></i> h</p>
                    <div class="flex py-5">
-                    <input type="text" placeholder="Type here" class="input input-bordered w-1/2 max-w-xs" />
+                    <input type="text" placeholder="Type here" id="parallelogram-field-b" class="input input-bordered w-1/2 max-w-xs" />
                     <p class="px-2 pt-2">cm</p>
-                    <input type="text" placeholder="Type here" class="input input-bordered w-1/2 max-w-xs" />
+                    <input type="text" placeholder="Type here" id="parallelogram-field-h" class="input input-bordered w-1/2 max-w-xs" />
                     
                    </div>
                   <div class="card-actions justify-end">
-                    <button class="btn btn-wide mx-auto bg-sky-500">Calculate</button>
+                    <button id="parallelogram-btn" class="btn btn-wide mx-auto bg-sky-500">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -97,7 +99,7 @@
                 <figure><img src="./img/pentagon.png" alt="Shoes" /></figure>
                 <div class="card-body">
                   <h2 id="pentagon" class="font-semibold text-2xl text-center">Pentagon</h2>
-                   <p>Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> b <i class="fa-solid fa-xmark"></i> h</p>
+                   <p>Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> p <i class="fa-solid fa-xmark"></i> b</p>
                    <div class="flex py-5">
                     <input type="text" placeholder="p" id="pentagon-field-p" class="input input-bordered w-1/2 max-w-xs" />
                     <p class="px-2 pt-2">cm</p>
@@ -109,19 +111,20 @@
                   </div>
                 </div>
               </div>
+              <!-- ellipse card 6 -->
             <div class="card w-full bg-base-100 shadow-xl text-center py-12 my-5 border">
                 <figure><img src="./img/ellipse.png" alt="Shoes" /></figure>
                 <div class="card-body">
-                  <h2 class="font-semibold text-2xl text-center">Ellipse</h2>
-                   <p>Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> b <i class="fa-solid fa-xmark"></i> h</p>
+                  <h2 id="ellipse" class="font-semibold text-2xl text-center">Ellipse</h2>
+                   <p>Area (A) = 3.1416 <i class="fa-solid fa-xmark"></i> a <i class="fa-solid fa-xmark"></i> b</p>
                    <div class="flex py-5">
-                    <input type="text" placeholder="Type here" class="input input-bordered w-1/2 max-w-xs" />
+                    <input type="text" placeholder="Type here" id="ellipse-field-a" class="input input-bordered w-1/2 max-w-xs" />
                     <p class="px-2 pt-2">cm</p>
-                    <input type="text" placeholder="Type here" class="input input-bordered w-1/2 max-w-xs" />
+                    <input type="text" placeholder="Type here" id="ellipse-field-b" class="input input-bordered w-1/2 max-w-xs" />
                     
                    </div>
                   <div class="card-actions justify-end">
-                    <button class="btn btn-wide mx-auto bg-sky-500">Calculate</button>
+                    <button id="ellipse-btn" class="btn btn-wide mx-auto bg-sky-500">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -146,7 +149,9 @@
         </section>
     </main>
 
-
+   <div id="btn-container">
+    
+   </div>
     
 
 
