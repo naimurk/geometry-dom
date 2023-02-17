@@ -1,40 +1,41 @@
 
 let serialNumber = 1
 
-// card 1
+// tiangle card 1
 document.getElementById('triangle-btn').addEventListener('click',function(){
-    const shapName = document.getElementById('triangle').innerText
-    const shapFieldb = document.getElementById('triangle-field-b').value
-    const shapFielh = document.getElementById('triangle-field-h').value
-
-    const shapFieldbNumber = parseFloat(shapFieldb);
-    const shapFielhNumber = parseFloat(shapFielh);
-    
-    if(shapFieldb == '' || shapFielh == '' )
-    {
-       alert ('input daw')
-    }
-    else {
-        const sum = shapFieldbNumber*shapFielhNumber*0.5;
-        const answer = sum.toFixed(2)
-        getTableData(shapName,answer)
-        serialNumber += 1
-    }
-    
+  
+    getAlldata ('triangle', 'triangle-field-b', 'triangle-field-h')
 })
 
-// card 2
+// rhombus card 4
 document.getElementById('rhombus-btn').addEventListener('click',function(){
-    const shapName = document.getElementById('rhombus').innerText
-    const shapFieldb = document.getElementById('rhombus-field-d1').value
-    const shapFielh = document.getElementById('rhombus-field-d2').value
+  
+    getAlldata ('rhombus', 'rhombus-field-d1', 'rhombus-field-d2')
+})
+
+//pentagon card 5 
+
+document.getElementById('pentagon-btn').addEventListener('click',function(){
+   
+    getAlldata ('pentagon', 'pentagon-field-p', 'pentagon-field-b')
+})
+
+
+
+
+
+function getAlldata (name, fieldOne , fieldTwo){
+
+    const shapName = document.getElementById(name).innerText
+    const shapFieldb = document.getElementById(fieldOne).value
+    const shapFielh = document.getElementById(fieldTwo).value
 
     const shapFieldbNumber = parseFloat(shapFieldb);
     const shapFielhNumber = parseFloat(shapFielh);
     
     if(shapFieldb == '' || shapFielh == '' )
     {
-       alert ('input daw')
+       alert ('give me some input')
     }
     else {
         const sum = shapFieldbNumber*shapFielhNumber*0.5;
@@ -42,24 +43,8 @@ document.getElementById('rhombus-btn').addEventListener('click',function(){
         getTableData(shapName,answer)
         serialNumber += 1
     }
-    
-})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
