@@ -1,6 +1,11 @@
 
 let serialNumber = 1
 
+// Blog btn
+document.getElementById('blog-btn').addEventListener('click',function(){
+    window.location.href = 'http://127.0.0.1:5500/question.html'
+})
+
 // tiangle card 1
 document.getElementById('triangle-btn').addEventListener('click',function(){
   
