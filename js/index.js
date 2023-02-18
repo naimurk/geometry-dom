@@ -39,8 +39,12 @@ document.getElementById('pentagon-btn').addEventListener('click',function(){
 
 document.getElementById('ellipse-btn').addEventListener('click',function(){
    
-    getAlldatatwo ('ellipse', 'ellipse-field-a', 'ellipse-field-b')
+    getAlldatatwo ('ellipse', 'ellipse-field-a', 'ellipse-field-b');
+    
 })
+
+
+
 
 
 
@@ -56,12 +60,12 @@ function getAlldata (name, fieldOne , fieldTwo){
     const shapFieldbNumber = parseFloat(shapFieldb);
     const shapFielhNumber = parseFloat(shapFielh);
     
-    if(shapFieldbNumber == '' || shapFielhNumber == '' )
+    if(  shapFieldb == '' ||  shapFielh == '' )
     {
        alert ('give me some input')
     }
 
-    else if (shapFieldbNumber !== 'number' || shapFielhNumber !== 'number' || shapFieldbNumber <= 0 || shapFielhNumber <= 0){
+    else if ( typeof shapFieldbNumber !== 'number' || typeof shapFielhNumber !== 'number' || shapFieldbNumber <= 0 || shapFielhNumber <= 0){
         alert ('input number with positive value')
     }
     
@@ -91,7 +95,7 @@ function getAlldataOne (name, fieldOne , fieldTwo){
     const shapFieldbNumber = parseFloat(shapFieldb);
     const shapFielhNumber = parseFloat(shapFielh);
     
-    if(shapFieldbNumber == '' || shapFielhNumber == '')
+    if(shapFieldb == '' ||  shapFielh == '' )
     {
        alert ('give me some input')
     }
@@ -124,7 +128,7 @@ function getAlldatatwo (name, fieldOne , fieldTwo){
     const shapFieldbNumber = parseFloat(shapFieldb);
     const shapFielhNumber = parseFloat(shapFielh);
     
-    if(shapFieldbNumber == '' || shapFielhNumber == '' )
+    if(shapFieldb == '' ||  shapFielh == '' )
     {
        alert ('give me some input')
     }
@@ -162,30 +166,94 @@ function getTableData (Name , answer ) {
     const btn = document.createElement('button');
     btn.setAttribute("id", "new-btn")
    
-    
-
-
-
-    
-    tr.innerHTML = `
+     tr.innerHTML = `
     <td>${serialNumber}</td>
     <td>${Name}</td>
     <td>${answer}</td>
-    
-    
-
     
 `;
     container.appendChild(tr);
     tr.appendChild(btn);
     document.getElementById('new-btn').style.color = 'white';
     document.getElementById('new-btn').style.backgroundColor = 'red';
-    btn.innerText = 'convert to m2';
- 
-   
+    
+    btn.innerText = 'convert to m^2'
+    
+    
+ }
 
+// div one
+document.getElementById('div-one').addEventListener('mouseover', function(){
+ getColor('div-one')
+    
+})
+document.getElementById('div-one').addEventListener('mouseout', function(){
+ getwhite('div-one')
+    
+})
+// div two
+document.getElementById('div-two').addEventListener('mouseover', function(){
+ getColor('div-two')
+    
+})
+document.getElementById('div-two').addEventListener('mouseout', function(){
+ getwhite('div-two')
+    
+})
+// div three
+document.getElementById('div-three').addEventListener('mouseover', function(){
+ getColor('div-three')
+    
+})
+document.getElementById('div-three').addEventListener('mouseout', function(){
+ getwhite('div-three')
+    
+})
+// div four
+document.getElementById('div-four').addEventListener('mouseover', function(){
+ getColor('div-four')
+    
+})
+document.getElementById('div-four').addEventListener('mouseout', function(){
+ getwhite('div-four')
+    
+})
+// div five
+document.getElementById('div-five').addEventListener('mouseover', function(){
+ getColor('div-five')
+    
+})
+document.getElementById('div-five').addEventListener('mouseout', function(){
+ getwhite('div-five')
+    
+})
+// div six
+document.getElementById('div-six').addEventListener('mouseover', function(){
+ getColor('div-six')
+    
+})
+document.getElementById('div-six').addEventListener('mouseout', function(){
+ getwhite('div-six')
+    
+})
+
+
+
+
+
+// this function generate new color;;;
+function getColor (id){
+    const randomNumber = Math.floor(Math.random() * 16777215);
+    const random ="#"+randomNumber.toString(16);
+    document.getElementById(id).style.backgroundColor = random
     
 }
+
+// this funtion does white background color 
+function getwhite (id){
+    document.getElementById(id).style.backgroundColor = "white";
+}
+
 
 
 
