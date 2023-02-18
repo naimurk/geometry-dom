@@ -50,7 +50,7 @@ document.getElementById('ellipse-btn').addEventListener('click',function(){
 
 
 
-
+// this funtion can multiply by 0.5
 function getAlldata (name, fieldOne , fieldTwo){
 
     const shapName = document.getElementById(name).innerText
@@ -85,7 +85,7 @@ function getAlldata (name, fieldOne , fieldTwo){
     }
 
 }
-
+// this funtion is ready to use for multiplication 
 function getAlldataOne (name, fieldOne , fieldTwo){
 
     const shapName = document.getElementById(name).innerText
@@ -119,6 +119,7 @@ function getAlldataOne (name, fieldOne , fieldTwo){
     }
 
 }
+ // this funtion will be multiply by 3.1416
 function getAlldatatwo (name, fieldOne , fieldTwo){
 
     const shapName = document.getElementById(name).innerText
@@ -176,7 +177,7 @@ function getTableData (Name , answer ) {
     container.appendChild(tr);
     tr.appendChild(btn);
     document.getElementById('new-btn').style.color = 'white';
-    document.getElementById('new-btn').style.backgroundColor = 'blue';
+    document.getElementById('new-btn').style.backgroundColor = 'Skyblue';
     document.getElementById('new-btn').style.padding = '10px';
 
     btn.innerText = 'convert to m^2'
