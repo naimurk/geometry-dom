@@ -60,10 +60,23 @@ function getAlldata (name, fieldOne , fieldTwo){
     {
        alert ('give me some input')
     }
+
+    else if (isNaN(shapFieldbNumber) || isNaN(shapFielhNumber) || shapFieldbNumber <= 0 || shapFielhNumber <= 0){
+        alert ('input number with positive value')
+    }
+    
     else {
         const sum = shapFieldbNumber*shapFielhNumber*0.5;
         const answer = sum.toFixed(2)
-        getTableData(shapName,answer)
+        const cm = "cm";
+        const square = "2";
+
+        const cm2 = cm + square.sup();
+
+   
+
+        const final = answer+cm2; 
+        getTableData(shapName,final)
         serialNumber += 1
     }
 
@@ -82,10 +95,22 @@ function getAlldataOne (name, fieldOne , fieldTwo){
     {
        alert ('give me some input')
     }
+
+    else if (isNaN(shapFieldbNumber) || isNaN(shapFielhNumber) || shapFieldbNumber <= 0 || shapFielhNumber <= 0){
+        alert ('input number with positive value')
+    }
     else {
         const sum = shapFieldbNumber*shapFielhNumber;
         const answer = sum.toFixed(2)
-        getTableData(shapName,answer)
+        const cm = "cm";
+        const square = "2";
+
+        const cm2 = cm + square.sup();
+
+   
+
+        const final = answer+cm2; 
+        getTableData(shapName,final)
         serialNumber += 1
     }
 
@@ -103,10 +128,22 @@ function getAlldatatwo (name, fieldOne , fieldTwo){
     {
        alert ('give me some input')
     }
+
+    else if (isNaN(shapFieldbNumber) || isNaN(shapFielhNumber) || shapFieldbNumber <= 0 || shapFielhNumber <= 0){
+        alert ('input number with positive value')
+    }
     else {
         const sum = shapFieldbNumber*shapFielhNumber*3.1416;
         const answer = sum.toFixed(2)
-        getTableData(shapName,answer)
+        const cm = "cm";
+        const square = "2";
+
+        const cm2 = cm + square.sup();
+
+   
+
+        const final = answer+cm2; 
+        getTableData(shapName,final)
         serialNumber += 1
     }
 
@@ -114,29 +151,45 @@ function getAlldatatwo (name, fieldOne , fieldTwo){
 
 
 
+
+
+
 // get table data
 function getTableData (Name , answer ) {
     const container = document.getElementById('table-container');
     const tr = document.createElement('tr')
+
+    const btn = document.createElement('button');
+    btn.setAttribute("id", "new-btn")
+   
     
-    
-    
+
+
+
     
     tr.innerHTML = `
     <td>${serialNumber}</td>
     <td>${Name}</td>
     <td>${answer}</td>
     
-    `;
+    
+
+    
+`;
     container.appendChild(tr);
-    // tr.appendChild(btn)
+    tr.appendChild(btn);
+    document.getElementById('new-btn').style.color = 'white';
+    document.getElementById('new-btn').style.backgroundColor = 'red';
+    btn.innerText = 'convert to m2';
+ 
+   
+
     
 }
 
 
-// const btn = document.createElement('button');
-// btn.setAttribute("id", "new-btn")
-// btn.innerText = 'sayem';
-// document.getElementById('btn-container').appendChild(btn);
-// document.getElementById('new-btn').style.color = 'red';
-// document.getElementById('new-btn').style.backgroundColor = 'red';
+
+
+
+
+
