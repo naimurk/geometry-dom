@@ -56,12 +56,12 @@ function getAlldata (name, fieldOne , fieldTwo){
     const shapFieldbNumber = parseFloat(shapFieldb);
     const shapFielhNumber = parseFloat(shapFielh);
     
-    if(shapFieldb == '' || shapFielh == '' )
+    if(shapFieldbNumber == '' || shapFielhNumber == '' )
     {
        alert ('give me some input')
     }
 
-    else if (isNaN(shapFieldbNumber) || isNaN(shapFielhNumber) || shapFieldbNumber <= 0 || shapFielhNumber <= 0){
+    else if (shapFieldbNumber !== 'number' || shapFielhNumber !== 'number' || shapFieldbNumber <= 0 || shapFielhNumber <= 0){
         alert ('input number with positive value')
     }
     
@@ -91,7 +91,7 @@ function getAlldataOne (name, fieldOne , fieldTwo){
     const shapFieldbNumber = parseFloat(shapFieldb);
     const shapFielhNumber = parseFloat(shapFielh);
     
-    if(shapFieldb == '' || shapFielh == '' )
+    if(shapFieldbNumber == '' || shapFielhNumber == '')
     {
        alert ('give me some input')
     }
@@ -124,7 +124,7 @@ function getAlldatatwo (name, fieldOne , fieldTwo){
     const shapFieldbNumber = parseFloat(shapFieldb);
     const shapFielhNumber = parseFloat(shapFielh);
     
-    if(shapFieldb == '' || shapFielh == '' )
+    if(shapFieldbNumber == '' || shapFielhNumber == '' )
     {
        alert ('give me some input')
     }
