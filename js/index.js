@@ -156,8 +156,6 @@ function getAlldatatwo (name, fieldOne , fieldTwo){
 
 
 
-
-
 // get table data
 function getTableData (Name , answer ) {
     const container = document.getElementById('table-container');
@@ -165,22 +163,25 @@ function getTableData (Name , answer ) {
 
     const btn = document.createElement('button');
     btn.setAttribute("id", "new-btn")
-   
-     tr.innerHTML = `
+     
+    
+    
+    tr.innerHTML = `
     <td>${serialNumber}</td>
     <td>${Name}</td>
     <td>${answer}</td>
     
-`;
+    `;
+    
     container.appendChild(tr);
     tr.appendChild(btn);
     document.getElementById('new-btn').style.color = 'white';
-    document.getElementById('new-btn').style.backgroundColor = 'red';
-    
+    document.getElementById('new-btn').style.backgroundColor = 'blue';
+    document.getElementById('new-btn').style.padding = '10px';
+
     btn.innerText = 'convert to m^2'
-    
-    
- }
+   
+}
 
 // div one
 document.getElementById('div-one').addEventListener('mouseover', function(){
@@ -253,6 +254,9 @@ function getColor (id){
 function getwhite (id){
     document.getElementById(id).style.backgroundColor = "white";
 }
+
+
+
 
 
 
